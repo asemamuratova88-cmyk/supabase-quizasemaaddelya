@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #f3f4f8;
+  color: #1f2333;
+}
+
+.card {
+  width: 100%;
+  max-width: 560px;
+  padding: 32px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(31, 35, 51, 0.08);
+}
+
+h1 {
+  margin: 0 0 24px;
+  font-size: 1.4rem;
+  line-height: 1.35;
+}
+
+.progress {
+  margin: 0 0 8px;
+  color: #6b7085;
+  font-size: 0.9rem;
+}
+
+.options {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+.option {
+  padding: 14px 16px;
+  border: 2px solid #e1e3ec;
+  border-radius: 10px;
+  background: #fff;
+  text-align: left;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.option:hover:not(:disabled) {
+  border-color: #3ecf8e;
+}
+
+.option.correct {
+  border-color: #2fa86f;
+  background: #e6f7ee;
+}
+
+.option.wrong {
+  border-color: #e5484d;
+  background: #fdecec;
+}
+
+.next {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #3ecf8e;
+  color: #fff;
+  font-weight: 600;
+}
+
+.next:disabled {
+  opacity: 0.4;
+}
+
+.score {
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+}
