@@ -3,13 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Квиз</title>
+    <meta name="theme-color" content="#7b5cff" />
+    <title>Робо-Квиз 🤖</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap"
+    />
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <main id="app" class="card">
-      <p>Загрузка вопросов…</p>
+    <div class="sky" aria-hidden="true">
+      <span class="floater" style="--x: 4%; --y: 10%; --size: 2.6rem; --dur: 19s; --delay: -3s">⭐</span>
+      <span class="floater" style="--x: 14%; --y: 62%; --size: 2.2rem; --dur: 24s; --delay: -14s">🤖</span>
+      <span class="floater" style="--x: 24%; --y: 30%; --size: 2rem; --dur: 17s; --delay: -8s">💡</span>
+      <span class="floater" style="--x: 33%; --y: 85%; --size: 2.8rem; --dur: 22s; --delay: -1s">🚀</span>
+      <span class="floater" style="--x: 43%; --y: 6%; --size: 2rem; --dur: 26s; --delay: -18s">🧠</span>
+      <span class="floater" style="--x: 52%; --y: 92%; --size: 2.3rem; --dur: 20s; --delay: -11s">💻</span>
+      <span class="floater" style="--x: 61%; --y: 18%; --size: 2.6rem; --dur: 18s; --delay: -5s">🎈</span>
+      <span class="floater" style="--x: 70%; --y: 75%; --size: 2rem; --dur: 23s; --delay: -16s">✨</span>
+      <span class="floater" style="--x: 78%; --y: 40%; --size: 2.8rem; --dur: 25s; --delay: -9s">🌈</span>
+      <span class="floater" style="--x: 86%; --y: 88%; --size: 2.2rem; --dur: 21s; --delay: -2s">🛰️</span>
+      <span class="floater" style="--x: 92%; --y: 22%; --size: 2.4rem; --dur: 18s; --delay: -12s">🎮</span>
+      <span class="floater" style="--x: 9%; --y: 45%; --size: 2.4rem; --dur: 27s; --delay: -20s">🪐</span>
+    </div>
+
+    <div class="sound-controls">
+      <button
+        id="music-toggle"
+        class="icon-btn icon-btn--music"
+        type="button"
+        aria-label="Музыка"
+        aria-pressed="true"
+        title="Выключить музыку"
+      >
+        🎵
+      </button>
+      <button
+        id="sfx-toggle"
+        class="icon-btn"
+        type="button"
+        aria-label="Звуки"
+        aria-pressed="true"
+        title="Выключить звуки"
+      >
+        🔊
+      </button>
+    </div>
+
+    <main id="app" class="card card--loading">
+      <div class="mascot-row mascot-row--column">
+        <div class="mascot mascot--big mascot--loading">
+          <span class="mascot__face" aria-hidden="true">🤖</span>
+          <span class="mascot__badge" aria-hidden="true">⚙️</span>
+        </div>
+        <p class="bubble">Робик ищет вопросы…</p>
+      </div>
     </main>
+
+    <canvas id="confetti" class="confetti" aria-hidden="true"></canvas>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
